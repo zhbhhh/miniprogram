@@ -1,0 +1,48 @@
+<!--pages/borrowdetail.wxml-->
+<view class='header-view'>
+  <image class='title-log' src='/images/scan_succeed.png'></image>
+  <view>扫码成功</view>
+</view>
+  <image wx:if="{{false}}" class='shop-image' src="{{shopImage}}"></image>
+
+<view class='divLine top'></view>
+<view class='shop-addr' wx:if="{{false}}">
+  <text class='shop-name'>{{shop.shopName}} ({{shop.address}})</text>
+  <image class='right-image' src='/images/right_arrow.jpg'></image>
+</view>
+<view class='price'>
+  <view class='money'>￥{{money}}</view><view class='hour'>/小时</view>
+</view>
+<view class='price-dec'>{{freeMin}}分钟内免费 每天封顶{{maxCost}}元</view>
+
+<view class='divLine bottom'></view>
+<!-- <form bindsubmit="submitInfo" report-submit='true' >
+    <button form-type="submit" disabled='{{killShake}}' class='commit-borrow' bindtap='commit'>确定使用
+      <view class="vv">
+        <form bindsubmit="formSubmit" report-submit="true">
+          <button formType="submit" class='commit-borrow'>
+            <view class="vv">
+            </view>
+          </button>
+        </form>
+      </view>
+    </button>
+</form> -->
+
+<form bindsubmit="submitInfo" report-submit='true' >
+    <button form-type="submit" disabled='{{killShake}}' class='btn' bindtap='commit'>确定使用
+      <view class="vv">
+        <form bindsubmit="formSubmit" report-submit="true">
+          <button disabled='{{killShake}}' formType="submit" class='btn'>
+            <view disabled='{{killShake}}' class="vv">
+              确定使用
+            </view>
+          </button>
+        </form>
+      </view>
+    </button>
+</form>
+
+<button  class='back-home' bindtap='backHome'>返回首页</button>
+
+

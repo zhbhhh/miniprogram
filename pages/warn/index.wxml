@@ -1,0 +1,62 @@
+<!--pages/warn/index.wxml-->
+<view class='fault-father'>
+   <scroll-view class='scroll'>
+      <view class="choose">
+          <view class='title-warn'>发现故障</view> 
+            
+      </view>
+
+      <view class='qr' bindtap='qr'>
+
+        <image class='image-qr' src='/images/warn_scan.png'> </image>
+        <view hidden='{{scan_type}}'>扫描充电箱二维码</view>
+        <view hidden='{{!scan_type}}' class='device-num-view'>
+          <view>{{chargingboxno}}</view>
+          <view>重新扫描</view>
+        </view>
+      </view>
+
+    <view class='fault'>
+      <view class='fault-view'>
+        <button class='{{!click1?"fault-button1":"fault-button1-1"}}' plain='{{!click1}}'style='color:{{click1?"#fff":"#A7A7A7"}};'  bindtap='click1bindtap'>充电宝不能充电</button>
+        <button class='{{!click2?"fault-button2":"fault-button2-1"}}' plain='{{!click2}}' style='color:{{click2?"#fff":"#A7A7A7"}};'  bindtap='click2bindtap'>不能取出充电宝</button>
+      </view>
+      <view class='fault-view'>
+        <button class='{{!click3?"fault-button1":"fault-button1-1"}}' plain='{{!click3}}' style='color:{{click3?"#fff":"#A7A7A7"}};width:60%;' bindtap='click3bindtap'>归还时，不能锁住充电宝</button>
+        <button class='{{!click4?"fault-button2":"fault-button2-1"}}' plain='{{!click4}}' style='color:{{click4?"#fff":"#A7A7A7"}};' bindtap='click4bindtap'>其他</button>
+      </view>
+      <view class='fault-view' >
+        <button class='{{!click5?"fault-button1":"fault-button1-1"}}' plain='{{!click5}}' style='color:{{click5?"#fff":"#A7A7A7"}};' bindtap='click5bindtap'>归还后，订单未结束</button>   
+      </view>
+    </view>
+
+    <view class='title-warn' style='margin-top:50rpx;'>请选择充电箱故障仓口</view>
+    
+    <view class='fault-num'>
+      <block  wx:for="{{numlist}}" wx:for-item="item" wx:key="{{index}}">
+      <button class='fault-num-btn' id="{{item.num}}" plain='{{!item.check}}' style='color:{{item.check?"#fff":"#A7A7A7"}};' bindtap='fault_num'>{{item.num}}</button>
+      </block>
+    </view>
+    
+    <view>
+      <textarea bindconfirm="bindconfirm" maxlength='140' bindinput="bindinput" value='{{textValue}}' bindblur="bindblur" class='textarea-des' placeholder='备注'></textarea>
+      <view class='input-count'>{{inputcount}}/140</view>
+    </view>
+    
+    <view class='photo-view' bindtap='bindCamera'>
+      <image class='image-photo' src='{{faultimage}}' ></image>
+      <view>请拍摄故障充电宝或者充电箱图片含周围环境</view>
+    </view>
+    <view class='null'></view>
+      
+  </scroll-view>
+
+  <view class='bottom-btn'>
+    <view class='bottom-child'>
+      <button class='commit-style' disabled='{{commitdis}}' catchtap='commit'>提交</button>
+      <view class='contact' catchtap='contactservice'>联系客服</view> 
+    </view>
+    <text>客服在线时间：9:00-18:00</text>
+  </view>
+  
+</view>

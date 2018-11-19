@@ -1,0 +1,22 @@
+
+<view class='title'>常见问题</view>
+<view class='father-view' wx:for="{{questions}}" wx:key="index" wx-for-item="item">
+  <view class='phone_one' id='{{index}}' bindtap="clickitem" >
+    <view class="phone_personal">{{item.title}}</view>
+    <image src="/images/down_arrow.png" class="personal_image {{openid==index ? 'rotateRight' :''}}" style='margin-right:40rpx;'></image>
+    </view>
+    <view class="person_box">
+      <view class="phone_select" hidden="{{openid!=index}}" >
+        <view >{{item.content}}</view>
+      </view>
+  </view>
+</view>
+<button class='contact-button' bindtap="actionSheetTap">联系客服</button>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+

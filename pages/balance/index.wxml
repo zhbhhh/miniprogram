@@ -1,0 +1,25 @@
+<view class='balance-view'>
+  <image src='/images/balance_bg.png'></image>
+  <view class='child-view'><text class='child-text'>{{totalBalance}}</text><text>元</text></view>
+  <view class='child-view1'>可用余额</view>
+
+  <view class='balance-view2'>
+    <view>
+      <text>{{myWallet.recharge_balance}}元</text>
+      <view class='text-style'>充值余额</view>
+    </view>
+
+    <view class='jk'>|</view>
+
+    <view>
+      <text>{{myWallet.balance_gived}}元</text>
+      <view class='text-style'>赠送余额</view>
+    </view>  
+
+  </view>
+</view>
+
+<view class='balance-view1'>
+  <button class='charge-button' bindtap='recharge'>充值</button>
+  <view class='child-view1'><text style='color:#ccc;'>点击充值，表示您已同意</text><text class='child-text1' bindtap='rechargeprotocol'>《充值协议》</text></view>
+</view>

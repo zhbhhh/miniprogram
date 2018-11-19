@@ -1,0 +1,155 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx7d498f7ffd96b40e",
+	"projectname": "Q%E7%94%B5%E7%A7%91%E6%8A%80",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 15,
+			"list": [
+				{
+					"id": -1,
+					"name": "warn",
+					"pathName": "pages/warn/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mywallet",
+					"pathName": "pages/mywallet/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "userinfo",
+					"pathName": "pages/userinfo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "setting",
+					"pathName": "pages/settings/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shops",
+					"pathName": "pages/shops/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "balance",
+					"pathName": "pages/balance/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "deposit",
+					"pathName": "pages/deposit/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/aboutme/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rechargerecord",
+					"pathName": "pages/rechargerecord/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "help",
+					"pathName": "pages/help/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shopdetail",
+					"pathName": "pages/shopdetail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "charge",
+					"pathName": "pages/charge/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "transaction",
+					"pathName": "pages/transactiondetail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "scansucceed",
+					"pathName": "pages/scansucceed/index",
+					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "billing",
+					"pathName": "pages/billing/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rechargesucced",
+					"pathName": "pages/rechargesucced/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "borrowresult",
+					"pathName": "pages/borrowresult/index",
+					"query": ""
+				},
+				{
+					"id": 18,
+					"name": "更新测试",
+					"pathName": "pages/index/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

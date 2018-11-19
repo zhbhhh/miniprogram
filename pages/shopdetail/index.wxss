@@ -1,0 +1,128 @@
+/* pages/shopdetail/index.wxss */
+page{
+  background: #F2F2F2;
+}
+
+.shop-parent{
+  background: #fff;
+  height: 70vh;
+  margin: 30rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  
+}
+.image-state{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  top: 30rpx;
+  width: 60rpx;
+  height: 70rpx;
+  background: #5EC5F2;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.image-state image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.image-state text{
+  font-size: 8px;
+  margin-top: 5rpx;
+  color: #fff;
+}
+.shop-logo{
+  height: 30vh;
+  width: 70%;
+  display: flex;
+  margin-left: 15%;
+  margin-top: 70rpx;
+}
+.shop_clock{
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.shop-name{
+  margin-left: 5%;
+  color: #000;
+  margin-top: 20rpx;
+}
+.shop-image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 5%;
+}
+.opening{
+  font-size: 16px;
+  margin-left: 5%;
+}
+.shop-location{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.shop-location text{
+  margin-left: 5%;
+  width: 70%;
+  color: #7AD1BE;
+}
+.nav-image{
+  position: absolute;
+  right: 10%;
+  width: 41rpx;
+  height: 41rpx;
+}
+.shop_phone{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.text-phone{
+  color: #7AD1BE;
+  margin-left: 5%;
+}
+.bottom-view{
+  background: #fff;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  padding-top: 40rpx;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.borrow-view{
+  margin-left: 40rpx;
+}
+.borrow-view text{
+  font-size: 16px;
+  color: #7AD1BE;
+}
+.repay-view{
+  margin-right: 40rpx;
+}
+.repay-view text{
+  font-size: 16px;
+  color: #DC9D64
+}
+.divLine{
+ background: #E0E3DA;
+ width: 2rpx;
+ height: 40rpx;
+}
+.scan{
+  width: 358rpx;
+  height: 117rpx;
+}
+.scan-view{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10vh;
+}

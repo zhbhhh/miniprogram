@@ -1,0 +1,42 @@
+<!--pages/shopdetail/index.wxml-->
+<view class='shop-parent'>
+  <view class="image-state" id='{{index}}' style='background:{{shop.shopStatus==1?"#5EC5F2":"#FDA154"}}' bindtap='{{shop_detail}}' >
+        <image src='/images/shops_time.png'></image>
+        <text wx:if="{{shop.shopStatus==1}}">营业中</text>
+        <text wx:else="{{shop.shopStatus==0}}">休息中</text>
+      
+   </view>
+    <image class='shop-logo' src='{{shop.shopPhoto}}'></image>
+    <view class='shop-name'>{{shop.shopName}}</view>
+    <view class='shop_clock'>
+      <image class='shop-image' src='/images/opening.png'></image>
+      <text class='opening'>{{shop.businessTime}}</text>
+    </view>
+    <view class='shop-location' bindtap='navgation'>
+      <image class='shop-image' src='/images/shop_location.png'></image>
+      <text >{{shop.address}}</text>
+      <image class='nav-image' src='/images/shop_nav.png'></image>
+    </view>
+
+    <view class='shop_phone' bindtap='phone'>
+      <image class='shop-image' src='/images/shop_phone.png'></image>
+      <text class='text-phone'>{{shop.shopTel}}</text>
+    </view>
+
+    <view class='bottom-view'>
+            <view class='borrow-view'>
+              <text class='borrow'>可借: {{shop.canBorrowNum}}</text>
+            </view>
+
+            <view class='divLine'></view>
+
+            <view class='repay-view'>
+              <text class='repay'>可还: {{shop.canBackNum}}</text>               
+            </view>    
+    </view>
+
+</view>
+<view class='scan-view'>
+  <image class='scan' src='{{image_src}}' bindtap='scan_recharge'></image>
+</view>
+

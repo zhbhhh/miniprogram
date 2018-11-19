@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/warn/index",
+    "pages/mywallet/index",
+    "pages/userinfo/index",
+    "pages/settings/index",
+    "pages/login/index",
+    "pages/shops/index",
+    "pages/balance/index",
+    "pages/deposit/index",
+    "pages/aboutme/index",
+    "pages/rechargerecord/index",
+    "pages/help/index",
+    "pages/shopdetail/index",
+    "pages/charge/index",
+    "pages/transactiondetail/index",
+    "pages/scansucceed/index",
+    "pages/billing/index",
+    "pages/rechargesucced/index",
+    "pages/borrowresult/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Q电",
+    "navigationBarTextStyle": "black"
+  }
+}

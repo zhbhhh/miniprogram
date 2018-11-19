@@ -1,0 +1,12 @@
+<view class='login-view'>
+  <image class="logo-image" src="{{logo}}"></image>
+  <text>Q电</text>
+</view>
+
+<button open-type="getUserInfo" class='login-button' bindtap='weixinlogin'>
+  
+    <image src='/images/weixin_logo.png'> </image>
+    <text class='login-text'>微信一键登录</text>
+ 
+
+</button>

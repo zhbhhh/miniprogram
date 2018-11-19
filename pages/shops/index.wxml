@@ -1,0 +1,49 @@
+
+  <view class='home-header' style='flex-direction:row;'>
+    <view  class='left-user' bindtap='user_bind'><image style='width:50rpx;height:50rpx;' src='/images/user.png'></image> </view>
+    <input class='home-input' placeholder='搜索附近Q电' bindconfirm='bindconfirm' value="{{searchValue}}"></input>
+    <view  class='right-user' bindtap='home'><image style='width:50rpx;height:50rpx;' src='/images/back_map.png'></image></view>
+  </view>
+  
+<scroll-view style="flex-direction:column;">
+
+
+    <view class='father-view' wx:for="{{shopslist}}" id='{{index}}' wx:key="index" wx:for-item="item" catchtap='shopdetail'>
+      <view class="image-state"  style='background:{{item.shopStatus==1?"#5EC5F2":"#FDA154"}}' >
+        <image src='/images/shops_time.png'></image>
+        <text wx:if="{{item.shopStatus==1}}">营业中</text>
+        <text wx:else="{{item.shopStatus==2}}">休息中</text>
+      
+      </view>
+      
+      <view class="item-header">
+          <image class='image' src='{{item.shopPhoto}}'></image>
+          <view class='item-view'>
+            <text class='item-name'>{{item.shopName}}</text>
+            <view class='open-view'>
+              <image class='open-image' src='/images/opening.png'></image>
+              <text class='opening'>{{item.businessTime}}</text>
+            </view>
+            <view class='addr-view'>
+              <text class='addr' >{{item.address}}</text>
+              <text class='distence'>{{item.distance}}米</text>
+            </view>
+          </view>
+      </view>
+        
+      <view class='bottom-view'>
+            <view class='borrow-view'>
+              <text class='borrow'>可借: {{item.canBorrowNum}}</text>
+            </view>
+
+            <view class='divLine'></view>
+
+            <view class='repay-view'>
+              <text class='repay'>可还: {{item.canBackNum}}                </text>
+            </view>
+            
+          </view>
+      </view>
+
+</scroll-view>
+<view wx:if="{{noRecorde}}" class='no-record'>无记录！</view>

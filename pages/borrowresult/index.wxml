@@ -1,0 +1,8 @@
+<!--pages/borrowresult/index.wxml-->
+<view class='header-view'>
+  <view>借用成功，请取出充电宝</view>
+  <text> {{lockID}}</text>
+</view>
+
+<view class='dec'>1.7s后充电宝会自动上锁，请及时取走充电宝</view>
+<view class='dec'>2.取走充电宝后，请先检查充电宝是否能正常使用</view>

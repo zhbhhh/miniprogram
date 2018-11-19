@@ -1,0 +1,7 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="czje">充值金额</view>
+<view class="amountList" bindtap="selectAmount">
+   <button  wx:for="{{amountList}}" wx:key='{{index}}' data-id="{{index}}" class="{{curSelected ==index?'selected':''}}">￥{{item}}</button>
+</view>
+
+<button class="btn_topay selected" disabled='{{killShake}}' bindtap="toPay">去充值</button>

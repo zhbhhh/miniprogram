@@ -1,0 +1,41 @@
+/* pages/transactiondetail/index.wxss */
+page{
+  background: #fff;
+}
+
+.transaction-detail-text{
+  font: 30px;
+  color: #000;
+  margin-left: 5%;
+}
+.item-view{
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.order-num{
+  font-size: 16px;
+  margin-top: 20rpx;
+}
+.transaction-type{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 10rpx;
+}
+.gap{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.time{
+  font-size: 12px;
+  margin-top: 10rpx;
+}
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 2rpx;
+ margin-top: 20rpx;
+}

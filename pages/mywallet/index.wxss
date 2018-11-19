@@ -1,0 +1,39 @@
+.mywallet-view{
+  display: flex;
+  border-radius: 10rpx;
+  margin: 40rpx;
+  height: 15vh;
+  box-shadow: 0 0 20rpx rgba(0,0,0,.2);
+  align-items: center;
+}
+.mywallet-view2{
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5EC5F2;
+  height: 15vh;
+  width: 15vh;
+}
+.mywallet-view3{
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  height: 15vh;
+  flex: 1;
+  justify-content: space-between;
+}
+.inte-style{
+  font-size: 12px;
+  color: #ccc;
+}
+.arrow{
+  font-size: 30px;
+  margin-right: 30rpx;
+  color: #ccc;
+}
+.image{
+  width: 100rpx;
+  height: 100rpx;
+}

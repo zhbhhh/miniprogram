@@ -1,0 +1,50 @@
+<!--index.wxml-->
+
+<view class="home-style" style='flex-direction:column;'>
+  <view class='home-header' style='flex-direction:row;'>
+    <view  class='left-user' bindtap='user_bind'><image style='width:50rpx;height:50rpx;' src='/images/user.png'></image> </view>
+    <input class='home-input' bindconfirm='bindconfirm' placeholder='搜索附近Q电'></input>
+    <view  class='right-user' bindtap='nearby_bind'><image style='width:50rpx;height:50rpx;' src='/images/search.png'></image></view>
+  </view>
+
+<view class="container" >
+    <map id="xhcharging" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" bindregionchange="bindregionchange" polyline="{{polyline}}" bindtap='clickmap' markers="{{markers}}" controls="{{controls}}" bindmarkertap="bindmarkertap"  bindcontroltap="bindcontroltap" show-location/>
+  </view>
+</view>
+
+<cover-view class='map-shop-detail' wx:if='{{shopdetailhide}}' bindtap='clickshop'>
+    <cover-view class="item-header">
+          <cover-image class='shop-detail-image' src='{{shop.shopPhoto}}'></cover-image>
+          <cover-view class='item-view'>
+            <cover-view class='item-name'>{{shop.shopName}}</cover-view>
+            <cover-view class='open-view'>
+              <cover-image class='open-image' src='/images/opening.png'></cover-image>
+              <cover-view class='opening'>{{shop.businessTime}}</cover-view>
+            </cover-view>
+            <cover-view class='addr-view'>
+              <cover-view class='addr' >{{shop.address}}</cover-view>
+              <cover-view class='distence'>{{shop.distance}}                  </cover-view>
+            </cover-view>
+          </cover-view>
+      </cover-view>
+        
+        <cover-view class='jjjj' style='background:{{shop.shopStatus==1?"#5EC5F2":"#FDA154"}};'> </cover-view>
+        <cover-view class="image-state" id='{{index}}' style='background:{{shop.shopStatus==1?"#5EC5F2":"#FDA154"}};border-bottom-left-radius: 15rpx; border-bottom-right-radius: 15rpx;' bindtap='{{shop_detail}}' >
+          <cover-image src='/images/shops_time.png'></cover-image>
+          <cover-view wx:if="{{shop.shopStatus==1}}">营业中</cover-view>
+          <cover-view wx:else="{{shop.shopStatus==0}}">休息中</cover-view>
+        
+    </cover-view>
+
+      <cover-view class='bottom-view'>
+            <cover-view class='borrow-view'>
+              <cover-view class='borrow'>可借: {{shop.canBorrowNum}}</cover-view>
+            </cover-view>
+            <cover-view class='divLine'></cover-view>
+            <cover-view class='repay-view'>
+              <cover-view class='repay'>可还: {{shop.canBackNum}}                </cover-view>
+            </cover-view>              
+      </cover-view>
+ 
+</cover-view>
+

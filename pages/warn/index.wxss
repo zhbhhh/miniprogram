@@ -1,0 +1,158 @@
+/* pages/wallet/index.wxss */
+page{
+  background: #fff;
+}
+.choose{
+	background-color: #fff;
+}
+
+
+.title-warn{
+  padding: 0rpx 0 30rpx 5%;
+	font-size: 30rpx;
+}
+.qr{
+  display: flex;
+  align-items: center;
+  background: #F2F1F6;
+  margin: 0 5% 0 5%;
+  height: 10vh;
+}
+.image-qr{
+  height: 75rpx;
+  width: 75rpx;
+  margin:30rpx;
+}
+.fault{
+  margin-top: 40rpx;
+}
+.fault-view{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.fault-view button{
+  font-size: 16px;
+  color: #A7A7A7;
+}
+.fault-button1{
+  margin-left: 5%;
+  border-radius: 50rpx;
+  width: 40%;
+  height: 7vh;
+
+}
+
+.fault-button1-1{
+  background:#00A2E9;
+  margin-left: 5%;
+  border-radius: 50rpx;
+  width: 40%;
+  height: 7vh;
+}
+
+.fault-button2{
+  margin-left: 50rpx;
+  background:  #00A2E9;
+  border-radius: 50rpx;
+}
+
+.fault-button2-1{
+  background:#00A2E9;
+  margin-left: 50rpx;
+  border-radius: 50rpx;
+}
+.fault-num{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  padding-left: 3%;
+  padding-right: 3%;
+  flex-wrap: wrap;
+}
+
+.fault-num-btn{
+  width: 14%;
+  height: 7vh;
+  border-radius: 40rpx;
+  margin: 15rpx;
+  font-size: 16px;
+  color: #A7A7A7;
+  background: #00A2E9;
+}
+.textarea-des{
+  height: 160rpx;
+  border-radius: 10rpx;
+  border-width: 2rpx;
+  border-style: solid;
+  border-color: #EDEDED;
+  margin: 5%;
+  padding-left: 20rpx;
+}
+.input-count{
+  margin-left: 74%;
+  font-size: 16px;
+  color: #A7A7A7;
+}
+.photo-view{
+  display: flex;
+  flex-direction: row;
+
+}
+.photo-view view{
+  font-size: 16px;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  width: 60%;
+  color: #A7A7A7;
+}
+.image-photo{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 5%;
+}
+.bottom-btn{
+  display: flex;
+  position: fixed;
+  bottom: 0rpx;
+  padding-bottom: 10rpx;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+}
+.bottom-btn text{
+  text-align: center;
+  color:  #A7A7A7;
+  font-size: 16px;
+}
+.bottom-child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  color: #00A2E9;
+  font-size: 16px;
+  border-radius: 50rpx;
+  border-width: 2rpx;
+  border-color: #00A2E9;
+  border-style: solid;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin-right: 20rpx;
+}
+.commit-style{
+  border-radius: 50rpx;
+  background: #00A2E9;
+  width: 60%;
+}
+.null{
+  height: 30vh;
+}
+.device-num-view view{
+  font-size: 30rpx;
+}

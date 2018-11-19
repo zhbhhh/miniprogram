@@ -1,0 +1,33 @@
+/* pages/rechargesucced/index.wxss */
+.header-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.header-view image{
+  width: 40px;
+  height: 40px;
+  margin-top: 10vh;
+}
+.recharge-status{
+  color: #40B034;
+}
+.company-name{
+  margin-top: 20vh;
+  font-size: 12px;
+}
+.recharge-money{
+  font-size: 30px;
+}
+.commit-borrow{
+  background: #5EC5F2;
+  color: #fff;
+  border-radius: 50rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: absolute;
+  bottom: 5vh;
+  width: 80%;
+}

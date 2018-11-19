@@ -1,0 +1,8 @@
+<!--pages/rechargesucced/index.wxml-->
+<view class='header-view'>
+  <image src='/images/weixin_pay.png'></image>
+  <text class='recharge-status'>支付成功</text>
+  <text class='company-name'>Q电科技</text>
+  <text class='recharge-money'>￥{{rechargeMoney}}</text>
+</view>
+<button class='commit-borrow' bindtap='backHome'>返回首页</button>
