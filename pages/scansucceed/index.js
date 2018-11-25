@@ -349,34 +349,6 @@ Page({
     var formId =e.detail.formId;
     this.data.formId2 = formId;
     console.log("submitInfo,"+formId);
-    // wx.showModal({
-    //   title: formId,
-    //   content: that.data.formId1,
-    // })
-    // wx.getStorage({
-    //   key: app.constants.userinfo,
-    //   success: function(res) {
-    //     var userinfo = JSON.parse(res.data);
-    //     wx.request({
-    //       url: app.constants.ip + "/wechat/user/templateMessage/publishModelMessage",
-    //       data: {
-    //         skey: userinfo.skey,
-    //         formId1: that.data.formId1,
-    //         formId2:formId,
-    //       },
-    //       header: {},
-    //       method: 'POST',
-    //       dataType: 'json',
-    //       responseType: 'text',
-    //       success: function (res) {
-    //         console.log(res);
-    //       },
-    //       fail: function (res) {
-    //         console.log("fail:"+res);
-    //       }
-    //     })
-    //   },
-    // })
     this.commit1();  //获取formId 后再告诉后台借用充电宝
   },
   formSubmit:function(e){

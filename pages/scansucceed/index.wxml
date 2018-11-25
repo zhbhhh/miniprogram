@@ -33,7 +33,7 @@
     <button form-type="submit" disabled='{{killShake}}' class='btn' bindtap='commit'>确定使用
       <view class="vv">
         <form bindsubmit="formSubmit" report-submit="true">
-          <button disabled='{{killShake}}' formType="submit" class='btn'>
+          <button disabled='{{killShake}}' form-type="submit" class='btn'>
             <view disabled='{{killShake}}' class="vv">
               确定使用
             </view>
