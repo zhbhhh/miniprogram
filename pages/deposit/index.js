@@ -41,6 +41,7 @@ Page({
         money: 0,
         depositStatus: 0
       })
+      this.getDepositStatus();
     }
 
   },
@@ -95,6 +96,7 @@ Page({
   },
   recharge:function(e){
     var that = this;
+    console.log("recharge:::::");
     that.setData({
       killShake:true,
     })
@@ -605,5 +607,49 @@ Page({
                           })
                         },
                       })
+  },
+  getDepositStatus:function(){
+    var that = this;
+    wx.getStorage({
+      key: app.constants.userinfo,
+      success: function (res) {
+        var userinfo = JSON.parse(res.data);
+        //访问接口获取积分余额信息
+        wx: wx.request({
+          url: app.constants.ip + "/wechat/user/firstPage/personalCenter",
+          data: {
+            skey: userinfo.skey
+          },
+          header: {},
+          method: 'POST',
+          dataType: 'json',
+          responseType: 'text',
+          success: function (res) {
+            var personalInfo = res.data.personalCenter.personalInfo;
+            var depositStatus = "";
+            if (personalInfo.deposit_status != null && personalInfo.deposit_status === "1") {
+              //押金已交
+              depositStatus = "已交";
+              that.setData({
+                depositStatusValue: "退押金",
+                money: 100,
+                depositStatus: 1
+              })
+            } else if (personalInfo.deposit_status != null && personalInfo.deposit_status === "0") {
+              //押金未交
+            } else if (personalInfo.deposit_status != null && personalInfo.deposit_status === "2") {
+              //正在退款中
+              that.setData({
+                depositStatusValue: "正在退款.....",
+                money: 100,
+                depositStatus: 2
+              })
+            }
+          },
+          fail: function (res) { },
+          complete: function (res) { },
+        })
+      },
+    })
   }
 })

@@ -169,7 +169,7 @@ Page({
           },
           complete: function (res) { wx.hideLoading(); },
         })
-        console.log(code);
+        // console.log(code);
       },
       fail: function (res) { 
         

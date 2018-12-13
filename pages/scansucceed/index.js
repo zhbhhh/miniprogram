@@ -354,5 +354,6 @@ Page({
   formSubmit:function(e){
     var formId1 = e.detail.formId;
     this.data.formId1 = formId1;
+    console.log("formSubmit," + formId1);
   }
 })
