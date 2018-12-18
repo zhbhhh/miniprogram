@@ -183,3 +183,7 @@
  width: 2rpx;
  height: 40rpx;
 }
+.text_person{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}

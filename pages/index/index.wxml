@@ -2,7 +2,10 @@
 
 <view class="home-style" style='flex-direction:column;'>
   <view class='home-header' style='flex-direction:row;'>
-    <view  class='left-user' bindtap='user_bind'><image style='width:50rpx;height:50rpx;' src='/images/user.png'></image> </view>
+    <view  class='left-user' bindtap='user_bind'>
+        <image style='width:50rpx;height:50rpx;' src='/images/user.png'></image>
+        <text class='text_person'>个人中心</text>
+    </view>
     <input class='home-input' bindconfirm='bindconfirm' placeholder='搜索附近Q电'></input>
     <view  class='right-user' bindtap='nearby_bind'><image style='width:50rpx;height:50rpx;' src='/images/search.png'></image></view>
   </view>
