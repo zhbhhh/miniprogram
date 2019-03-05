@@ -8,15 +8,15 @@ App({
 
   constants:{
     userinfo:"userinfo",
-    serverPhoneNo:"076985251988",
-    version:"v1.1.3",
+    serverPhoneNo:"4008379686",
+    version:"v1.1.5",
     ip:"https://qdtechwx.com"
-    // ip:"http://192.168.0.108:8080",
+    // ip:"http://192.168.0.103:8080",
   },
   data:{
     networkStatus:false
   },
-
+  
   getPermission: function (obj) {
     wx.chooseLocation({
       success: function (res) {

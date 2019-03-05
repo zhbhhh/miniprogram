@@ -259,13 +259,18 @@ Page({
               if (res.data.data.payStatus == "1") {  //表示已支付
                 if (res.data.data.transactionSource == "3") {//3表示交易源为余额,4表示免费
                       wx.showModal({
-                        title: '支付宝归还成功',
+                        title: '充电宝归还成功',
                         content: '本次消费'+res.data.data.payAmount+'元，已从余额扣除',
                       })
                 } else if (res.data.data.transactionSource == "4"){//本次充电免费
                   wx.showModal({
-                    title: '支付宝归还成功',
+                    title: '充电宝归还成功',
                     content: '本次充电免费',
+                  })
+                } else if (res.data.data.transactionSource == "8") {//本次充电免费
+                  wx.showModal({
+                    title: '充电宝归还成功',
+                    content: '您是VIP用户，本次消费' + res.data.data.payAmount+'元,已为您免单',
                   })
                 }
               }else{ //表示未支付

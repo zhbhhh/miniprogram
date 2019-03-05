@@ -34,6 +34,7 @@ Page({
           latitude: res.latitude,
           //访问接口获取附近商家
         })
+        console.log("long:"+res.longitude+",,latitude:"+res.latitude);
         that.getNearbyShop(res.longitude, res.latitude);
       },
       fail:function(e){
@@ -622,6 +623,11 @@ Page({
                   wx.showModal({
                     title: '充电宝归还成功',
                     content: '本次充电免费',
+                  })
+                } else if (res.data.data.transactionSource == "8") {//本次充电免费
+                  wx.showModal({
+                    title: '充电宝归还成功',
+                    content: '您是VIP用户，本次消费' + res.data.data.payAmount + '元,已为您免单',
                   })
                 }
               } else { //表示未支付

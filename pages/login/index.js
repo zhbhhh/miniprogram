@@ -70,7 +70,6 @@ Page({
     
     var that = this;
 
-
     wx.getUserInfo({
       success: function (res) {
         var userinfoTemp ={
@@ -119,6 +118,7 @@ Page({
   },
   userLogin:function(userinfo){
     var that = this;
+    that.data.nickName = userinfo.nickName;
     wx.showLoading({
       title: '登录中......',
     })
@@ -131,7 +131,8 @@ Page({
           // url: 'https://www.qdtechwx.com/wechat/user/firstPage/loginUser',
           url: app.constants.ip +"/wechat/user/firstPage/loginUser",
           data: {
-            code: code
+            code: code,
+            nickName:that.data.nickName
           },
           header: {},
           method: 'POST',
@@ -139,13 +140,13 @@ Page({
           responseType: 'text',
           success: function (res) {
             //存储skey和用户信息
-            var jj = res.data.loginUser.skey;
+            // var jj = res.data.loginUser.skey;
 
-            userinfo.skey = res.data.loginUser.skey;
+            userinfo.skey = res.data.loginUser.user.user.skey;
+            userinfo.nickName = res.data.loginUser.user.user.nickName;
          
             var user = JSON.stringify(userinfo);
             
-
             wx.setStorage({
               key: app.constants.userinfo,
               data: user
